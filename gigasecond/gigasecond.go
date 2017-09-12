@@ -4,4 +4,7 @@ import "time"
 
 const testVersion = 4
 
-func AddGigasecond(time.Time) time.Time
+func AddGigasecond(t time.Time) time.Time {
+	t = t.Add(time.Duration(1e9)*time.Second)
+	return t
+}
